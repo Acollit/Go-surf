@@ -1,0 +1,446 @@
+.sleep {
+  position: relative;
+  padding-bottom: 460px;
+
+  @include small-tablet {
+    padding-bottom: 360px;
+  }
+
+  @include mobile {
+    padding-bottom: 260px;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 187.219px;
+    height: 264.576px;
+    background-image: url(../img/Fran.png);
+    right: 0;
+    bottom: 270px;
+
+    @include small-tablet {
+      display: none;
+    }
+  }
+
+  &__swiper {
+    position: relative;
+    padding-bottom: 70px;
+
+    @include small-tablet {
+
+      padding-bottom: 170px;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      background-image: url(../img/Fran-mini.png);
+      width: 158.138px;
+      height: 215px;
+      right: 0;
+      bottom: 305px;
+      z-index: 2;
+
+      @include mobile {
+        display: none;
+      }
+    }
+
+
+  }
+
+  &__content {
+    position: relative;
+    background-image: url(../img/sleep-bg.png);
+    background-size: 1102px 770.996px;
+    background-position: top left;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 1078px;
+
+    &::after {
+      content: '';
+      position: absolute;
+      background-image: url(../img/hammock.png);
+      width: 565.819px;
+      height: 284.747px;
+      right: -70px;
+      top: 475px;
+
+      @include tablet {
+        display: none;
+      }
+    }
+  }
+
+
+  &__title {
+    position: relative;
+    display: table;
+    padding-right: 199px;
+    margin: 0;
+    margin-left: 132px;
+    font-size: 40px;
+    font-weight: 800;
+    line-height: 86px;
+    text-transform: uppercase;
+    color: var(--light-color);
+
+    @include mobile {
+      padding-right: 180px;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 181px;
+      height: 52px;
+      background-image: url(../img/star.svg);
+      top: 15px;
+      right: 0;
+
+      @include tablet {
+        top: 0;
+      }
+
+      @include small-tablet {
+        top: -5px;
+      }
+    }
+
+    @include tablet {
+      font-size: 30px;
+      line-height: 60px;
+      margin-left: 100px;
+    }
+
+    @include small-tablet {
+      font-size: 25px;
+      line-height: 50px;
+      margin-left: 70px;
+    }
+
+    @include mobile {
+      font-size: 20px;
+    }
+  }
+
+  &__text {
+    position: relative;
+    display: inline-block;
+    margin: 0;
+    padding-right: 104px;
+    padding-top: 678px;
+    margin-left: 132px;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: 7.333px;
+    text-transform: uppercase;
+    opacity: 0.501171886920929;
+    color: var(--light-color);
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 80px;
+      height: 1px;
+      background-color: var(--light-color);
+      opacity: 0.5;
+      right: 0;
+      bottom: 15px;
+
+      @include small-tablet {
+        width: 60px;
+      }
+    }
+
+    @include tablet {
+      font-size: 18px;
+      margin-left: 100px;
+    }
+
+    @include small-tablet {
+      font-size: 16px;
+      margin-left: 70px;
+    }
+
+    @include mobile {
+      padding-right: 70px;
+      font-size: 16px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    padding-top: 87px;
+    margin-left: 132px;
+
+    @include tablet {
+      margin-left: 100px;
+    }
+
+    @include small-tablet {
+      margin-left: 70px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      gap: 20px;
+    }
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    max-width: 280px;
+
+
+    @include small-tablet {
+      max-width: 140px;
+    }
+
+    &:not(:last-child) {
+      margin-right: 70px;
+
+      @include tablet {
+        margin-right: 30px;
+      }
+
+      @include small-tablet {
+        margin-right: 10px;
+
+      }
+    }
+
+
+
+    &:nth-child(4) {
+      &::after {
+        content: 'Per Night';
+        position: absolute;
+        top: 28px;
+        right: 0;
+        text-align: right;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 36px;
+        letter-spacing: 5.25px;
+        text-transform: uppercase;
+        color: var(--light-color);
+        opacity: 0.7463169693946838;
+
+        @include big-desktop {
+          top: 60px;
+        }
+
+        @include tablet {
+          top: 60px;
+          font-size: 10px;
+        }
+
+        @include small-tablet {
+          top: 18px;
+          font-size: 8px;
+        }
+
+        @include mobile {
+          top: 10px;
+          right: 28px;
+          font-size: 5px;
+
+        }
+      }
+    }
+  }
+
+  &__descr {
+    display: inline;
+    text-align: right;
+    margin: 0;
+    writing-mode: vertical-rl;
+    transform: rotate(-180deg);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+    color: var(--light-color);
+    opacity: 0.5;
+
+
+    @include tablet {
+      font-size: 16px;
+    }
+
+    @include small-tablet {
+      font-size: 14px;
+    }
+
+    @include mobile {
+      font-size: 12px;
+    }
+  }
+
+  &__subtitle {
+    display: inline;
+    margin: 0;
+    margin-left: 18px;
+    font-size: 40px;
+    font-weight: 800;
+    line-height: 36px;
+    text-transform: uppercase;
+    color: var(--light-color);
+
+    @include tablet {
+      font-size: 30px;
+    }
+
+    @include small-tablet {
+      font-size: 20px;
+      line-height: 20px;
+    }
+
+    @include mobile {
+      font-size: 16px;
+      margin-left: 5px;
+    }
+  }
+
+  &__link {
+    display: block;
+    text-align: center;
+    padding: 17px 0 22px 0;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 36px;
+    text-transform: uppercase;
+    color: var(--light-color);
+
+    @include small-tablet {
+      font-size: 30px;
+    }
+
+
+    @include mobile {
+      font-size: 20px;
+    }
+  }
+
+
+  &__box {
+    position: absolute;
+    margin-right: 77px;
+    right: 0;
+    top: 0;
+  }
+
+  &__nav {
+    display: flex;
+    gap: 20px;
+    justify-content: flex-end;
+  }
+
+  &__btn-next {
+    z-index: 10;
+    width: 24.147px;
+    height: 20.15px;
+    background-image: url(../img/arrow-next-2.svg);
+    opacity: 0.20;
+    cursor: pointer;
+  }
+
+  &__btn-prev {
+    z-index: 10;
+    width: 24.147px;
+    height: 20.15px;
+    background-image: url(../img/arrow-prev-2.svg);
+    opacity: 0.20;
+    cursor: pointer;
+  }
+
+  &__first {
+    position: relative;
+    padding-right: 28px;
+    margin-right: 8px;
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 1px;
+      background-color: var(--light-color);
+      right: 0;
+      top: 22px;
+      z-index: 2;
+
+      @include mobile {
+        top: 12px;
+      }
+    }
+  }
+
+  &__last {
+    position: relative;
+    padding: 14px 57px 16px 14px;
+    margin-left: -18px;
+    background-color: var(--main);
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 24.147px;
+      height: 20.15px;
+      flex-shrink: 0;
+      background-image: url(../img/arrow-next.svg);
+      top: 28px;
+      right: 16px;
+
+      @include small-tablet {
+        top: 23px;
+      }
+
+      @include mobile {
+        top: 17px;
+      }
+    }
+  }
+
+  &__btns {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    right: 0;
+    top: 40px;
+
+    @include big-desktop {
+      top: 80px;
+    }
+
+    @include small-tablet {
+      top: 30px;
+      right: 15px;
+    }
+
+    @include mobile {
+      top: 30px;
+      right: 35px;
+    }
+  }
+
+  &__minus {
+    width: 14.726px;
+    height: 2.745px;
+    background-color: var(--main);
+  }
+
+  &__plus {
+    width: 13.726px;
+    height: 13.726px;
+    background-image: url(../img/plus.svg);
+    background-repeat: no-repeat;
+  }
+}

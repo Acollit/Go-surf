@@ -1,0 +1,337 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.page {
+  height: 100%;
+  font-family: var(--font-family, sans-serif);
+  -webkit-text-size-adjust: 100%;
+
+
+}
+
+.page__body {
+  position: relative;
+  background-color: #171919;
+  margin: 0;
+  min-width: 320px;
+  min-height: 100%;
+  font-size: 16px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    background-color: var(--light-color);
+    width: 1px;
+    height: 100%;
+    max-height: 18450px;
+    top: 0;
+    left: 167.1px;
+    opacity: 0.0669642835855484;
+    z-index: -99999;
+
+    @include small-tablet {
+      left: 10vw;
+    }
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    background-color: var(--light-color);
+    width: 1px;
+    height: 100%;
+    max-height: 18450px;
+    top: 0;
+    left: 40vw;
+    opacity: 0.0669642835855484;
+    z-index: -99999;
+  }
+
+
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+a {
+  text-decoration: none;
+}
+
+.site-container {
+  overflow: hidden; // если используете на сайте position: sticky - уберите эту настройку
+
+  &::before {
+    content: '';
+    position: absolute;
+    background-color: var(--light-color);
+    width: 1px;
+    height: 100%;
+    max-height: 18450px;
+    top: 0;
+    left: 75vw;
+    opacity: 0.0669642835855484;
+    z-index: -99999;
+  }
+}
+
+.is-hidden {
+  display: none !important;
+  /* stylelint-disable-line declaration-no-important */
+}
+
+.btn-reset {
+  border: none;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.list-reset {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.input-reset {
+  -webkit-appearance: none;
+  appearance: none;
+  border: none;
+  border-radius: 0;
+  background-color: #fff;
+
+  &::-webkit-search-decoration,
+  &::-webkit-search-cancel-button,
+  &::-webkit-search-results-button,
+  &::-webkit-search-results-decoration {
+    display: none;
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  clip: rect(0 0 0 0);
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 var(--container-offset);
+  max-width: var(--container-width);
+}
+
+.js-focus-visible :focus:not(.focus-visible) {
+  outline: none;
+}
+
+.centered {
+  text-align: center;
+}
+
+.dis-scroll {
+  position: fixed;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  overscroll-behavior: none;
+}
+
+.page--ios .dis-scroll {
+  position: relative;
+}
+
+.section-title {
+  position: relative;
+  display: inline-block;
+  margin: 0;
+  margin-bottom: 100px;
+  padding-left: 255px;
+  font-size: 80px;
+  font-weight: 800;
+  line-height: 86px;
+  text-transform: uppercase;
+  color: var(--light-color);
+
+  @include tablet {
+    font-size: 60px;
+    padding-left: 200px;
+  }
+
+  @include small-tablet {
+    font-size: 40px;
+    line-height: 46px;
+    padding-left: 155px;
+  }
+
+
+  @include mobile {
+    font-size: 30px;
+    padding-left: 85px;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 1px;
+    background-color: var(--main);
+    right: 0;
+    top: 0;
+
+    @include mobile {
+      width: 60px;
+    }
+  }
+
+  &::before {
+    content: 'Travel';
+    position: absolute;
+    color: #FFF;
+    top: 25px;
+    left: -40px;
+    font-size: 200px;
+    font-weight: 800;
+    line-height: 156px;
+    text-transform: uppercase;
+    opacity: 0.019999999552965164;
+
+    @include tablet {
+      font-size: 150px;
+      left: -10px;
+    }
+
+    @include small-tablet {
+      font-size: 100px;
+      left: -10px;
+      top: -10px;
+    }
+
+    @include mobile {
+      font-size: 60px;
+      top: -30px;
+    }
+
+  }
+
+
+  &--surf {
+    &::before {
+      content: 'surf';
+
+
+    }
+  }
+
+  &--sleep {
+    &::before {
+      content: 'sleep';
+
+    }
+  }
+
+  &--shop {
+    &::before {
+      content: 'shop';
+
+    }
+  }
+}
+
+.description {
+  position: absolute;
+  top: -100px;
+  right: 15px;
+  text-align: right;
+
+  &--travel {
+    position: initial;
+  }
+
+  &__descr {
+    right: 0;
+    display: inline-block;
+    position: relative;
+    padding-left: 103px;
+    margin: 0 auto;
+    text-align: right;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: 7.333px;
+    text-transform: uppercase;
+    color: var(--light-color);
+    opacity: 0.501171886920929;
+
+    @include tablet {
+      font-size: 16px;
+    }
+
+    @include small-tablet {
+      font-size: 14px;
+    }
+
+    @include mobile {
+      font-size: 10px;
+      padding-left: 83px;
+      letter-spacing: 4.333px;
+    }
+
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 80px;
+      height: 1px;
+      top: 15px;
+      left: 0;
+      background-color: var(--light-color);
+      opacity: 0.501171886920929;
+
+      @include mobile {
+        display: none;
+      }
+    }
+  }
+
+  &__subtitle {
+    text-align: right;
+    margin: 0;
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 86px;
+    text-transform: uppercase;
+    color: var(--light-color);
+
+    @include tablet {
+      font-size: 30px;
+      line-height: 66px;
+    }
+
+    @include small-tablet {
+      font-size: 25px;
+      line-height: 56px;
+    }
+
+    @include mobile {
+      font-size: 18px;
+
+      line-height: 36px;
+    }
+  }
+}

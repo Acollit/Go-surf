@@ -1,0 +1,532 @@
+.shop {
+  margin-bottom: 200px;
+
+  &__swiper {
+    position: relative;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-around;
+    background-image: url(../img/shop-bg.png);
+    background-position: right center;
+    background-repeat: no-repeat;
+    background-size: 1054.721px 590.022px;
+
+    @include tablet {
+      flex-direction: column;
+      align-items: center;
+      gap: 50px;
+    }
+  }
+
+  &__box {
+    padding-top: 140px;
+    @include small-tablet {
+      padding-top: 100px;
+    }
+  }
+
+  &__title {
+    position: relative;
+    display: table;
+
+    margin: 0;
+    margin-bottom: 78px;
+    font-size: 40px;
+    font-weight: 800;
+    line-height: 40px;
+    text-transform: uppercase;
+    color: var(--light-color);
+
+
+    @include small-tablet {
+      font-size: 35px;
+    }
+  }
+
+  &__text {
+    position: relative;
+    display: inline-block;
+    margin: 0;
+    padding-right: 104px;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: 7.333px;
+    text-transform: uppercase;
+    opacity: 0.501171886920929;
+    color: var(--light-color);
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 80px;
+      height: 1px;
+      background-color: var(--light-color);
+      opacity: 0.5;
+      right: 0;
+      bottom: 15px;
+    }
+
+    @include tablet {
+      font-size: 20px;
+    }
+  }
+
+  &__price {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 67px;
+    font-size: 32px;
+    font-weight: 800;
+    line-height: 40px;
+    text-transform: uppercase;
+    color: var(--light-color);
+
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 181px;
+      height: 52px;
+      background-image: url(../img/star.svg);
+      top: -50px;
+      left: -15px;
+
+    }
+
+    &::after {
+      content: '99';
+      position: absolute;
+      font-size: 18px;
+      font-weight: 800;
+      line-height: 40px;
+      text-transform: uppercase;
+      color: var(--light-color);
+      top: -6px;
+    }
+  }
+
+  &__link {
+    display: block;
+    text-align: left;
+    padding: 17px 0 22px 0;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 36px;
+    text-transform: uppercase;
+    color: var(--light-color);
+
+    @include small-tablet {
+      font-size: 30px;
+    }
+
+
+    @include mobile {
+      font-size: 20px;
+    }
+  }
+
+  &__first {
+    position: relative;
+    padding-right: 28px;
+    margin-right: 8;
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 1px;
+      background-color: var(--light-color);
+      right: 0;
+      top: 22px;
+      z-index: 2;
+
+      @include mobile {
+        top: 12px;
+      }
+    }
+  }
+
+  &__last {
+    position: relative;
+    padding: 14px 57px 16px 14px;
+    margin-left: -10px;
+    background-color: var(--main);
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 24.147px;
+      height: 20.15px;
+      flex-shrink: 0;
+      background-image: url(../img/arrow-next.svg);
+      top: 28px;
+      right: 16px;
+
+      @include small-tablet {
+        top: 23px;
+      }
+
+      @include mobile {
+        top: 17px;
+      }
+    }
+  }
+
+  &__list {
+    display: flex;
+  }
+
+  &__subtitle {
+    margin: 0;
+    margin-bottom: 23px;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 40px;
+    text-transform: uppercase;
+    color: var(--light-color);
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &:not(:last-child) {
+      margin-right: 57px;
+    }
+
+  }
+
+  &__name {
+    display: inline-block;
+    margin-top: 35px;
+    margin-bottom: 16px;
+    text-align: right;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+    color: var(--light-color);
+    opacity: 0.5;
+
+    &--two {
+      margin-top: 62px;
+    }
+
+    @include small-tablet {
+      font-size: 16px;
+      letter-spacing: 4px;
+    }
+  }
+
+  &__count {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 40px;
+    text-transform: uppercase;
+    color: var(--light-color);
+
+    @include small-tablet {
+      font-size: 16px;
+    }
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+  &__point {
+    position: absolute;
+    margin: 0;
+    display: block;
+    background-color: var(--light-color);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-image: url(../img/plus.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 5;
+
+    &:hover {
+      &:nth-child(2) {
+        &::before {
+          visibility: visible;
+          opacity: 1;
+        }
+
+        &::after {
+          visibility: visible;
+          opacity: 0.5;
+        }
+      }
+
+      &:nth-child(3) {
+        &::before {
+          visibility: visible;
+          opacity: 1;
+        }
+
+        &::after {
+          visibility: visible;
+          opacity: 0.5;
+        }
+      }
+
+
+      &:nth-child(4) {
+        &::before {
+          visibility: visible;
+          opacity: 1;
+        }
+
+        &::after {
+          visibility: visible;
+          opacity: 0.5;
+        }
+      }
+
+    }
+
+
+    &:nth-child(2) {
+      top: 31%;
+      left: 70%;
+
+      &::before {
+        content: 'Double Concave with Vee Shape low point';
+        position: relative;
+        display: block;
+        margin-left: 140px;
+        margin-top: -15px;
+        width: 255px;
+        font-size: 24px;
+        font-weight: 800;
+        line-height: 24px;
+        text-transform: uppercase;
+        color: var(--light-color);
+        visibility: hidden;
+        opacity: 0;
+        transition: all .3s ease-in-out;
+
+        @include tablet {
+          font-size: 20px;
+        }
+
+        @include small-tablet {
+          font-size: 16px;
+          margin-left: 100px;
+          width: 180px;
+        }
+
+        @include mobile {
+          font-size: 14px;
+          margin-left: -40px;
+          margin-top: 65px;
+          width: 180px;
+        }
+
+      }
+
+      &::after {
+        content: '';
+        display: block;
+        width: 80px;
+        height: 1px;
+        background-color: var(--light-color);
+        margin-top: -23px;
+        margin-left: 30px;
+        opacity: 0;
+        visibility: hidden;
+        transition: all .3s ease-in-out;
+
+        @include small-tablet {
+          width: 60px;
+        }
+
+        @include mobile {
+          margin-top: -67px;
+          margin-left: -8px;
+          width: 40px;
+          transform: rotate(-90deg);
+        }
+      }
+    }
+
+    &:nth-child(3) {
+      top: 43%;
+      left: 0%;
+
+      &::before {
+        content: 'Double Concave with Vee Shape low point';
+        position: relative;
+        display: block;
+        margin-left: -400px;
+        margin-top: 50px;
+        width: 255px;
+        font-size: 24px;
+        font-weight: 800;
+        line-height: 24px;
+        text-transform: uppercase;
+        color: var(--light-color);
+        visibility: hidden;
+        opacity: 0;
+        transition: all .3s ease-in-out;
+        z-index: 5;
+
+        @include tablet {
+          font-size: 20px;
+        }
+
+        @include small-tablet {
+          font-size: 16px;
+          margin-left: -200px;
+          width: 180px;
+        }
+
+        @include mobile {
+          font-size: 14px;
+          margin-left: -50px;
+          margin-top: 65px;
+          width: 180px;
+        }
+      }
+
+      &::after {
+        content: '';
+        display: block;
+        width: 80px;
+        height: 1px;
+        background-color: var(--light-color);
+        transform: rotate(-23deg);
+        margin-top: -63px;
+        margin-left: -100px;
+        opacity: 0;
+        visibility: hidden;
+        transition: all .3s ease-in-out;
+
+        @include small-tablet {
+          width: 40px;
+          margin-left: -37px;
+          transform: rotate(-45deg);
+        }
+
+        @include mobile {
+          margin-top: -67px;
+          margin-left: -8px;
+          width: 40px;
+          transform: rotate(-90deg);
+        }
+      }
+    }
+
+    &:nth-child(4) {
+      top: 87%;
+      left: 23%;
+
+      &::before {
+        content: 'Double Concave with Vee Shape low point';
+        position: relative;
+        display: block;
+        margin-left: -400px;
+        margin-top: -15px;
+        width: 255px;
+        font-size: 24px;
+        font-weight: 800;
+        line-height: 24px;
+        text-transform: uppercase;
+        color: var(--light-color);
+        visibility: hidden;
+        opacity: 0;
+        transition: all .3s ease-in-out;
+        z-index: 5;
+
+        @include tablet {
+          font-size: 20px;
+        }
+
+        @include small-tablet {
+          font-size: 16px;
+          margin-left: -200px;
+          width: 180px;
+        }
+
+        @include mobile {
+          font-size: 14px;
+          margin-left: -65px;
+          margin-top: -75px;
+
+        }
+
+      }
+
+      &::after {
+        content: '';
+        display: block;
+        width: 80px;
+        height: 1px;
+        background-color: var(--light-color);
+        margin-top: -23px;
+        margin-left: -100px;
+        opacity: 0;
+        visibility: hidden;
+        transition: all .3s ease-in-out;
+
+        @include small-tablet {
+          width: 20px;
+          margin-left: -27px;
+
+        }
+
+        @include mobile {
+          margin-top: 10px;
+          margin-left: 0px;
+          width: 20px;
+          transform: rotate(-90deg);
+        }
+      }
+    }
+  }
+
+  &__img {
+    position: relative;
+  }
+
+  &__btns {
+    position: absolute;
+    top: 0;
+    right: 80px;
+    display: flex;
+    gap: 20px;
+    justify-content: flex-end;
+  }
+
+  &__btn-next {
+    z-index: 10;
+    display: block;
+    width: 24.147px;
+    height: 20.15px;
+    background-image: url(../img/arrow-next-2.svg);
+    opacity: 0.20;
+    cursor: pointer;
+  }
+
+  &__btn-prev {
+    display: block;
+    z-index: 10;
+    width: 24.147px;
+    height: 20.15px;
+    background-image: url(../img/arrow-prev-2.svg);
+    opacity: 0.20;
+    cursor: pointer;
+  }
+}
